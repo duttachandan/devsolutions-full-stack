@@ -8,6 +8,24 @@ const Sidebar = ({ toggle, setToggle }: {
     toggle: boolean,
     setToggle: Dispatch<SetStateAction<boolean>>,
 }) => {
+    const animateLinks = (text: string) => {
+        return text.split("").map((elm, index) => {
+            return (
+                <>
+                    <span
+                        className={`text-[24px] sm:text-[38px] text-nowrap md:text-[80px] ${Style.text_BaseNeuLight} font-bold uppercase`}
+                        style={{
+                            "--index": index
+                        } as React.CSSProperties}
+                        key={index}
+                    >
+                        {elm}
+                    </span>
+                </>
+            )
+        });
+    }
+
     return (
         <>
             {/* SideBar Code */}
@@ -47,8 +65,42 @@ const Sidebar = ({ toggle, setToggle }: {
                 </div>
 
                 {/* Main Links */}
-                <ul>
-
+                <ul className='pt-3.75'>
+                    <li>
+                        <Link className={`${Style.nav_links}`} href={'/about'}>
+                            {
+                                animateLinks('About')
+                            }
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className={`${Style.nav_links}`} href={'/about'}>
+                            {
+                                animateLinks('Services')
+                            }
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className={`${Style.nav_links}`} href={'/about'}>
+                            {
+                                animateLinks('Contact Us')
+                            }
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className={`${Style.nav_links}`} href={'/about'}>
+                            {
+                                animateLinks('Career')
+                            }
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className={`${Style.nav_links}`} href={'/about'}>
+                            {
+                                animateLinks('Blogs')
+                            }
+                        </Link>
+                    </li>
                 </ul>
                 {/*  */}
             </div>

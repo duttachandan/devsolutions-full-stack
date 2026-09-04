@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: BaseNueLight;
-    src: url('../assets/font/BaseNeueTrial-Expanded.ttf');
+    src: url('../assets/font/BaseNeueTrial-SuperExpExtBd.ttf');
 }
 
 @font-face {
@@ -29,8 +29,14 @@
     color: var(--primary-color) !important;
 }
 
-.text_white{
+.text_white {
     font-family: BaseNue, sans-serif;
+    color: var(--secondary-color);
+}
+
+.text_BaseNeuLight {
+    font-family: BaseNueLight, sans-serif;
+    font-weight: 900;
     color: var(--secondary-color);
 }
 
