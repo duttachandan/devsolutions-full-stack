@@ -3,6 +3,8 @@ import { RxCross2 } from "react-icons/rx";
 import Style from "@/style/style.module.css"
 import Link from 'next/link';
 
+import { FaLinkedinIn } from "react-icons/fa";
+
 
 const Sidebar = ({ toggle, setToggle }: {
     toggle: boolean,
@@ -11,32 +13,42 @@ const Sidebar = ({ toggle, setToggle }: {
     const animateLinks = (text: string) => {
         return text.split("").map((elm, index) => {
             return (
-                <>
+                <span
+                    className={`
+                            text-[24px] sm:text-[38px] text-nowrap 
+                            md:text-[80px] ${Style.text_BaseNeuLight} 
+                            font-bold uppercase ${Style.span_hover_effect}`
+                    }
+                    style={{
+                        "--index": index,
+                        "--content": `"${elm == ' ' ? '-' : elm}"`,
+                    } as React.CSSProperties}
+                    key={index}
+                >
                     <span
-                        className={`text-[24px] sm:text-[38px] text-nowrap md:text-[80px] ${Style.text_BaseNeuLight} font-bold uppercase`}
                         style={{
-                            "--index": index
+                            "--index": index,
+                            "--content": `"${elm}"`,
                         } as React.CSSProperties}
-                        key={index}
                     >
-                        {elm}
+                        {elm == ' ' ? '-' : elm}
                     </span>
-                </>
+                </span>
             )
         });
     }
 
     return (
         <>
-            {/* SideBar Code */}
             <div
                 className={`fixed h-screen w-screen top-0 left-0 
                 bg-(--primary-color) text-(--secondary-color) ${Style.sidebar}
                 ${toggle ? Style.sidebar_show : Style.sidebar_hide} px-3.75`}
             >
-                {/* top bar */}
-                <div className='flex items-center sm:px-3.75 pt-3.75 justify-between'>
-                    {/* Logo */}
+                <div
+                    className='flex items-center sm:px-3.75 
+                    pt-3.75 justify-between mb-4'
+                >
                     <Link className="w-37.25" href="/">
                         <svg
                             className="w-full object-cover"
@@ -50,11 +62,10 @@ const Sidebar = ({ toggle, setToggle }: {
                         Build With Purpose
                     </div>
 
-                    {/* Close Button */}
                     <span
                         className={`p-2 ${Style.bg_secondary} flex 
-                    items-center justify-center mb-0 ${Style.primary_btn} 
-                    uppercase gap-3 ${Style.close_btn}`}
+                        items-center justify-center mb-0 ${Style.primary_btn} 
+                        uppercase gap-3 ${Style.close_btn} cursor-pointer`}
                         onClick={() => setToggle(prev => !prev)}
                     >
                         <RxCross2 size={24} style={{ color: '#EE363D', fill: 'white', strokeWidth: '1.5' }} />
@@ -64,45 +75,76 @@ const Sidebar = ({ toggle, setToggle }: {
                     </span>
                 </div>
 
-                {/* Main Links */}
-                <ul className='pt-3.75'>
-                    <li>
-                        <Link className={`${Style.nav_links}`} href={'/about'}>
-                            {
-                                animateLinks('About')
-                            }
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className={`${Style.nav_links}`} href={'/about'}>
-                            {
-                                animateLinks('Services')
-                            }
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className={`${Style.nav_links}`} href={'/about'}>
-                            {
-                                animateLinks('Contact Us')
-                            }
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className={`${Style.nav_links}`} href={'/about'}>
-                            {
-                                animateLinks('Career')
-                            }
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className={`${Style.nav_links}`} href={'/about'}>
-                            {
-                                animateLinks('Blogs')
-                            }
-                        </Link>
-                    </li>
-                </ul>
-                {/*  */}
+                <div className=''>
+                    {/* Navbar Links */}
+                    <ul className='pt-3.75'>
+                        <li>
+                            <Link className={`${Style.nav_links}`} href={'/about'}>
+                                {
+                                    animateLinks('About')
+                                }
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className={`${Style.nav_links}`} href={'/about'}>
+                                {
+                                    animateLinks('Services')
+                                }
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className={`${Style.nav_links}`} href={'/about'}>
+                                {
+                                    animateLinks('Contact Us')
+                                }
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className={`${Style.nav_links}`} href={'/about'}>
+                                {
+                                    animateLinks('Career')
+                                }
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className={`${Style.nav_links}`} href={'/about'}>
+                                {
+                                    animateLinks('Blogs')
+                                }
+                            </Link>
+                        </li>
+                    </ul>
+                    {/* Social Media */}
+                    <div className='md:fixed top-18.5 right-8'>
+                        {/* Social Icons */}
+                        <div className='flex gap-2'>
+                            <Link
+                                className='p-3 border-2 rounded-full hover:bg-(--secondary-color) social-links'
+                                href=""
+                            >
+                                <FaLinkedinIn size={24} />
+                            </Link>
+                            <Link
+                                className='p-3 border-2 rounded-full hover:bg-(--secondary-color) social-links'
+                                href=""
+                            >
+                                <FaLinkedinIn size={24} />
+                            </Link>
+                            <Link
+                                className='p-3 border-2 rounded-full hover:bg-(--secondary-color) social-links'
+                                href=""
+                            >
+                                <FaLinkedinIn size={24} />
+                            </Link>
+                            <Link
+                                className='p-3 border-2 rounded-full hover:bg-(--secondary-color) social-links'
+                                href=""
+                            >
+                                <FaLinkedinIn size={24} />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     )

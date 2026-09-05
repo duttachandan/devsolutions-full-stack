@@ -41,7 +41,7 @@ const Navbar = () => {
                             </li>
                             <li className="h-12.5  w-12.5">
                                 <span
-                                    className={`p-2 w-[50] h-[50] ${Style.bg_primary} flex 
+                                    className={`p-2 cursor-pointer w-[50] h-[50] ${Style.bg_primary} flex 
                                     items-center justify-center mb-0 ${Style.primary_btn}`}
                                     onClick={() => setToggleSideBar((prev) => !prev)}
                                 >

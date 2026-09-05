@@ -17,6 +17,7 @@
     --primary-color: #EE363D;
     --secondary-color: rgba(251, 251, 251, 1);
     --tertiary-color: #ff4d6d;
+    --hover-secondary-color: #F9ADB0;
 }
 
 .bg_primary {
@@ -37,8 +38,46 @@
 .text_BaseNeuLight {
     font-family: BaseNueLight, sans-serif;
     font-weight: 900;
+    color: var(--hover-secondary-color);
+}
+
+.span_hover_effect {
+    position: relative;
+}
+
+.span_hover_effect::after {
+    content: var(--content);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    transition: 250ms ease-in-out;
+    transition-delay: calc(var(--index) * 0.02s);
     color: var(--secondary-color);
 }
+
+.nav_links>span>span {
+    transition: 250ms ease-in-out;
+    display: inline-block;
+    transition-delay: calc(var(--index) * 0.01s);
+}
+
+.nav_links {
+    overflow: hidden;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-wrap: nowrap;
+}
+
+.nav_links:hover>.span_hover_effect::after {
+    transform: translateY(-100%);
+}
+
+.nav_links:hover>.span_hover_effect>span {
+    transform: translateY(-100%);
+}
+
 
 .text_space {
     display: flex !important;
@@ -136,10 +175,3 @@
 .close_btn:hover>svg {
     transform: rotate(270deg);
 }
-
-
-/* @media screen and (max-width: 768px) {
-    .text_space {
-        font-size: 16px;
-    }
-} */

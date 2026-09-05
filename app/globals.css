@@ -19,3 +19,15 @@ li {
   border-right: 0.3px solid rgba(255, 255, 255, 0.2);
   border-left: 0.3px solid rgba(255, 255, 255, 0.2);
 }
+
+.social-links {
+  transition: linear 0.1s;
+}
+
+.social-links>svg {
+  transition: linear 0.1s;
+}
+
+.social-links:hover>svg {
+  fill: var(--primary-color);
+}
