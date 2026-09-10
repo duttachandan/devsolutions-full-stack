@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import SmoothScroll from "@/components/smooth-scroll";
+import ScrollLogger from "@/components/scrollLogger";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +18,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <div className="side_gap">
           <Navbar />
-          <main className="min-h-screen">
-            {children}
-          </main>
+          <SmoothScroll>
+            <ScrollLogger />
+            <main className="min-h-screen">
+              {children}
+            </main>
+          </SmoothScroll>
         </div>
       </body>
     </html>

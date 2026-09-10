@@ -10,7 +10,10 @@ const Navbar = () => {
     const [toggleSideBar, setToggleSideBar] = useState<boolean>(false);
 
     return (
-        <header className='px-3.75'>
+        <header
+            data-lenis-prevent
+            className='px-3.75'
+        >
             <div className="container">
                 <div className="flex justify-between items-center py-3">
                     <div className="nav-logo">
@@ -28,6 +31,15 @@ const Navbar = () => {
                     <div className='flex items-center ms-auto'>
                         <ul className="flex list-none ms-auto gap-3 items-center">
                             <li className="hidden sm:block">
+                                <span
+                                    className={`text-(--primary-color) 
+                                    ${Style.font_base} mr-3 hover:text-(--secondary-color) 
+                                    duration-300 ease-in-out cursor-pointer`}
+                                >
+                                    Services
+                                </span>
+                            </li>
+                            <li className="hidden sm:block">
                                 <Link
                                     className={`items-center ${Style.text_space}
                                     px-3 py-2 uppercase ${Style.primary_btn} ${Style.navbar_btn}`}
@@ -39,7 +51,7 @@ const Navbar = () => {
                                     <BsArrowReturnRight size={26} />
                                 </Link>
                             </li>
-                            <li className="h-12.5  w-12.5">
+                            <li className="h-12.5 w-12.5">
                                 <span
                                     className={`p-2 cursor-pointer w-[50] h-[50] ${Style.bg_primary} flex 
                                     items-center justify-center mb-0 ${Style.primary_btn}`}
@@ -50,7 +62,6 @@ const Navbar = () => {
                             </li>
                         </ul>
                     </div>
-
                     <Sidebar
                         toggle={toggleSideBar}
                         setToggle={setToggleSideBar}

@@ -4,6 +4,7 @@ import Style from "@/style/style.module.css"
 import Link from 'next/link';
 
 import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
 
 
 const Sidebar = ({ toggle, setToggle }: {
@@ -23,7 +24,7 @@ const Sidebar = ({ toggle, setToggle }: {
                         "--index": index,
                         "--content": `"${elm == ' ' ? '-' : elm}"`,
                     } as React.CSSProperties}
-                    key={index}
+                    key={index} 
                 >
                     <span
                         style={{
@@ -37,7 +38,7 @@ const Sidebar = ({ toggle, setToggle }: {
             )
         });
     }
-
+     
     return (
         <>
             <div
@@ -128,7 +129,7 @@ const Sidebar = ({ toggle, setToggle }: {
                                 className='p-3 border-2 rounded-full hover:bg-(--secondary-color) social-links'
                                 href=""
                             >
-                                <FaLinkedinIn size={24} />
+                                <FaInstagram size={24} />
                             </Link>
                             <Link
                                 className='p-3 border-2 rounded-full hover:bg-(--secondary-color) social-links'
@@ -143,7 +144,7 @@ const Sidebar = ({ toggle, setToggle }: {
                                 <FaLinkedinIn size={24} />
                             </Link>
                         </div>
-                    </div>
+                    </div>     
                 </div>
             </div>
         </>

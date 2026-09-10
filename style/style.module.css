@@ -18,6 +18,16 @@
     --secondary-color: rgba(251, 251, 251, 1);
     --tertiary-color: #ff4d6d;
     --hover-secondary-color: #F9ADB0;
+    --font-base: BaseNue, sans-serif;
+    --font-baseNue: BaseNueLight, sans-serif;
+}
+
+.font_base {
+    font-family: var(--font-base);
+}
+
+.font_baseNue {
+    font-family: var(--font-baseNue);
 }
 
 .bg_primary {
