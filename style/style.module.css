@@ -167,11 +167,19 @@
 .sidebar_show {
     transform: translate(0, 0) skewX(0deg) rotate(0deg);
     opacity: 1;
+    z-index: 99;
 }
 
 .sidebar_hide {
     transform: translateY(600px) translateX(300px) skewX(-5deg) rotate(3deg);
     opacity: 0;
+    animation: sidebarHide 1000ms forwards ease-in-out;
+}
+
+@keyframes sidebarHide {
+    100% {
+        z-index: -99;
+    }
 }
 
 .close_btn {

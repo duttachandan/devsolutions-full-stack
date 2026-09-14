@@ -1,8 +1,13 @@
 @import "tailwindcss";
 @import "lenis/dist/lenis.css";
 
-*{
+* {
   box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
 }
 
 body {
