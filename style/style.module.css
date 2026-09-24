@@ -15,6 +15,7 @@
 
 :root {
     --primary-color: #EE363D;
+    --highlight-color: yellow;
     --secondary-color: rgba(251, 251, 251, 1);
     --tertiary-color: #ff4d6d;
     --hover-secondary-color: #F9ADB0;
@@ -102,8 +103,8 @@
 }
 
 .primary_btn {
-    background: var(--primary-color);
-    color: var(--secondary-color);
+    background: white;
+    color: var(--primary-color);
     transition: ease-in-out 0.2s;
     transform: rotate(0deg) skew(0deg);
 }
@@ -111,6 +112,7 @@
 .primary_btn:hover {
     background: var(--tertiary-color);
     transform: rotate(-10deg) skew(-5deg);
+    color:white;
 }
 
 .navbar_btn>span {
@@ -174,6 +176,27 @@
     transform: translateY(600px) translateX(300px) skewX(-5deg) rotate(3deg);
     opacity: 0;
     animation: sidebarHide 1000ms forwards ease-in-out;
+}
+
+.main_font_after {
+    font-size: 12px;
+    font-family: var(--font-baseNue);
+    letter-spacing: 5px;
+    text-align: end;
+}
+
+.main_font_after span:first-child{
+    font-size:42px;
+    padding-right:20px;
+}
+
+.main_font_after span:last-child{
+    font-size:28px;
+}
+
+.main_heading, .main_font_after{
+    mix-blend-mode:difference;
+    color:white;
 }
 
 @keyframes sidebarHide {

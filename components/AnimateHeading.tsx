@@ -12,9 +12,7 @@ export default function AnimatedHeading(text: string) {
 
     useEffect(() => {
         if (!sectionRef.current || !headingRef.current) return;
-
         const letters = headingRef.current.querySelectorAll(".letter");
-
         const ctx = gsap.context(() => {
             gsap.fromTo(
                 letters,
@@ -27,8 +25,8 @@ export default function AnimatedHeading(text: string) {
                     y: 0,
                     opacity: 1,
                     rotateZ: 0,
-                    duration: 1,
-                    ease: "circ.in",
+                    duration: 1.5,
+                    ease: "power3.inOut",
                     stagger: 0.05,
                     scrollTrigger: {
                         trigger: sectionRef.current,
@@ -38,10 +36,10 @@ export default function AnimatedHeading(text: string) {
                 }
             );
         }, sectionRef);
-
         return () => ctx.revert();
     }, []);
 
+    
     return (
         <span ref={sectionRef}>
             <span ref={headingRef}>

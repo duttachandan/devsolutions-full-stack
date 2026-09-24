@@ -8,15 +8,22 @@ import AnimatedHeading from "@/components/AnimateHeading"
 export default function Home() {
   return (
     <main>
+      <div className="banner-section-background"></div>
       <section className="banner-section min-h-screen">
-        <div className="banner-section min-h-screen flex items-center">
+        <div className="min-h-screen flex items-end py-10">
           <div>
-            <h1
-              className={`${Style.font_baseNue} text-(--primary-color)
-              text-[9.375vw] xl:text-[96px] uppercase font-bold`}
-            >
-              {AnimatedHeading("Inovative IT Solutions")}
-            </h1>
+            <div className="relative">
+              <h1
+                className={`${Style.font_baseNue} ${Style.main_heading}
+              text-[8.575vw] text-nowrap xl:text-[96px] uppercase font-bold`}
+              >
+                {AnimatedHeading("Nexusvektra")}
+              </h1>
+              <div className={`${Style.main_font_after}`}>
+                <span>Digital</span>
+                <span>Solutions</span>
+              </div>
+            </div>
             <p className="mt-4">
               Techwave delivers cutting-edge IT solutions.
               We innovate for a smart hassle free growth
@@ -24,6 +31,14 @@ export default function Home() {
             </p>
           </div>
         </div>
+      </section>
+      <section className="about-section">
+        <h2
+          className={`${Style.font_baseNue} text-(--primary-color)
+          text-[8.412vw] xl:text-[80px] uppercase font-bold text-nowrap`}
+        >
+          {AnimatedHeading("Services")}
+        </h2>
       </section>
       <section className="about-section">
         <h2

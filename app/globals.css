@@ -41,3 +41,18 @@ li {
 .social-links:hover>svg {
   fill: var(--primary-color);
 }
+
+.banner-section-background {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background: url('../assets/Image/background.jpg') no-repeat center/cover;
+}
+
+.banner-section-background::after {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background: url('../assets/Image/background-mask.jpg') repeat;
+}
