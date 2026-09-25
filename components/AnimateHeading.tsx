@@ -17,16 +17,16 @@ export default function AnimatedHeading(text: string) {
             gsap.fromTo(
                 letters,
                 {
+                    opacity: 0,
                     y: 100,
-                    opacity: 0.5,
-                    rotateZ: -20,
+                    scale: 1.3,
                 },
                 {
+                    scale: 1,
                     y: 0,
                     opacity: 1,
-                    rotateZ: 0,
                     duration: 1.5,
-                    ease: "power3.inOut",
+                    ease: "expo.inOut",
                     stagger: 0.05,
                     scrollTrigger: {
                         trigger: sectionRef.current,
@@ -39,7 +39,7 @@ export default function AnimatedHeading(text: string) {
         return () => ctx.revert();
     }, []);
 
-    
+
     return (
         <span ref={sectionRef}>
             <span ref={headingRef}>

@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import SmoothScroll from "@/components/smooth-scroll";
 import ScrollLogger from "@/components/scrollLogger";
+import AOSInit from "@/components/AOS";
+import "aos/dist/aos.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,6 +18,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <AOSInit/>
         <div className="side_gap">
           <Navbar />
           <SmoothScroll>

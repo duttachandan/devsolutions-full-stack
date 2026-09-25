@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @font-face {
     font-family: BaseNeu;
     src: url('../assets/font/BaseNeueTrial-ExpExtBd.ttf');
@@ -13,6 +15,9 @@
     src: url('../assets/font/BaseNeueTrial-CondensedBold.ttf');
 }
 
+
+
+
 :root {
     --primary-color: #EE363D;
     --highlight-color: yellow;
@@ -21,6 +26,12 @@
     --hover-secondary-color: #F9ADB0;
     --font-base: BaseNue, sans-serif;
     --font-baseNue: BaseNueLight, sans-serif;
+    --font-inter: "Inter", sans-serif;
+}
+
+.container-fluid {
+    padding: 0 15px;
+    max-width: 100% !important;
 }
 
 .font_base {
@@ -112,7 +123,7 @@
 .primary_btn:hover {
     background: var(--tertiary-color);
     transform: rotate(-10deg) skew(-5deg);
-    color:white;
+    color: white;
 }
 
 .navbar_btn>span {
@@ -185,23 +196,23 @@
     text-align: end;
 }
 
-.main_font_after span:first-child{
-    font-size:42px;
-    padding-right:20px;
+.main_font_after>span:first-child {
+    padding-right: 20px;
 }
 
-.main_font_after span:last-child{
-    font-size:28px;
+.main_font_after>span:last-child {
+    font-size: 28px;
 }
 
-.main_heading, .main_font_after{
-    mix-blend-mode:difference;
-    color:white;
+.main_heading,
+.main_font_after {
+    mix-blend-mode: difference;
+    color: white;
 }
 
 @keyframes sidebarHide {
     100% {
-        z-index: -99;
+        z-index: -1000;
     }
 }
 
@@ -215,4 +226,35 @@
 
 .close_btn:hover>svg {
     transform: rotate(270deg);
+}
+
+.subTtitle {
+    max-width: 400px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+}
+
+
+@media screen and (min-width: 1280px) {
+    .main_font_after>span {
+        font-size: 82px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .main_font_after>span:first-child {
+        font-size: 22px;
+        padding-right: 10px;
+    }
+
+    .main_font_after>span:last-child {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .main_font_after {
+        text-align: start;
+    }
 }

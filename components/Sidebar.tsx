@@ -2,7 +2,7 @@ import React, { type Dispatch, type SetStateAction } from 'react'
 import { RxCross2 } from "react-icons/rx";
 import Style from "@/style/style.module.css"
 import Link from 'next/link';
-
+import animateLinks from './AnimateLinks';
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 
@@ -11,33 +11,6 @@ const Sidebar = ({ toggle, setToggle }: {
     toggle: boolean,
     setToggle: Dispatch<SetStateAction<boolean>>,
 }) => {
-    const animateLinks = (text: string) => {
-        return text.split("").map((elm, index) => {
-            return (
-                <span
-                    className={`
-                            text-[24px] sm:text-[38px] text-nowrap 
-                            md:text-[80px] ${Style.text_BaseNeuLight} 
-                            font-bold uppercase ${Style.span_hover_effect}`
-                    }
-                    style={{
-                        "--index": index,
-                        "--content": `"${elm == ' ' ? '-' : elm}"`,
-                    } as React.CSSProperties}
-                    key={index} 
-                >
-                    <span
-                        style={{
-                            "--index": index,
-                            "--content": `"${elm}"`,
-                        } as React.CSSProperties}
-                    >
-                        {elm == ' ' ? '-' : elm}
-                    </span>
-                </span>
-            )
-        });
-    }
      
     return (
         <>
@@ -78,7 +51,7 @@ const Sidebar = ({ toggle, setToggle }: {
 
                 <div className=''>
                     {/* Navbar Links */}
-                    <ul className='pt-3.75'>
+                    <ul hidden={!toggle} className='pt-3.75'>
                         <li>
                             <Link className={`${Style.nav_links}`} href={'/about'}>
                                 {
@@ -118,7 +91,7 @@ const Sidebar = ({ toggle, setToggle }: {
                     {/* Social Media */}
                     <div className='md:fixed top-18.5 right-8'>
                         {/* Social Icons */}
-                        <div className='flex gap-2'>
+                        <div hidden={!toggle} className='flex gap-2'>
                             <Link
                                 className='p-3 border-2 rounded-full hover:bg-(--secondary-color) social-links'
                                 href=""
