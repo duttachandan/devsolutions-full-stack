@@ -5,8 +5,8 @@ import Link from "next/link";
 import Style from "@/style/style.module.css"
 import Sidebar from "./Sidebar";
 import { useState } from "react";
-import Image from "next/image";
-import Logo from "@/assets/Image/image (2).png"
+// import Image from "next/image";
+// import Logo from "@/assets/Image/image (2).png"
 
 const Navbar = () => {
     const [toggleSideBar, setToggleSideBar] = useState<boolean>(false);
@@ -17,7 +17,7 @@ const Navbar = () => {
             className='px-3.75 absolute top-0 left-0 right-0 z-99'
         >
             <div className="container-fluid">
-                <div className="flex justify-between items-center py-3">
+                <div className="flex -mx-3.75 md:mx-0 justify-between items-center py-3">
                     <div className="nav-logo">
                         <div className="text-color-brand flex-embed is-visible w-embed">
                             <Link className="w-37.25" href="/">

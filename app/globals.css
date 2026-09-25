@@ -1,6 +1,33 @@
 @import "tailwindcss";
 @import "lenis/dist/lenis.css";
 
+@font-face {
+  font-family: BaseNeu;
+  src: url('../assets/font/BaseNeueTrial-ExpExtBd.ttf');
+}
+
+@font-face {
+  font-family: BaseNueLight;
+  src: url('../assets/font/BaseNeueTrial-SuperExpExtBd.ttf');
+}
+
+@font-face {
+  font-family: BaseNeuItalic;
+  src: url('../assets/font/BaseNeueTrial-CondensedBold.ttf');
+}
+
+
+:root {
+  --primary-color: #EE363D;
+  --highlight-color: yellow;
+  --secondary-color: rgba(251, 251, 251, 1);
+  --tertiary-color: #ff4d6d;
+  --hover-secondary-color: #F9ADB0;
+  --font-base: BaseNue, sans-serif;
+  --font-baseNue: BaseNueLight, sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -23,13 +50,22 @@ li {
   list-style-type: none;
 }
 
+.title2 {
+  font-size: 3.5vw;
+}
+
+.container-fluid {
+  padding: 0 15px;
+  max-width: 100% !important;
+}
+
 .copyright_text {
-  font-family: var(--font-inter);
+  font-family: "Inter", sans-serif;
   color: white;
-  font-size: 32px;
-  font-weight: 900;
+  font-size: 38px;
+  font-weight: 600;
   display: inline-block;
-  transform: scaleY(1.3);
+  transform: scaleY(1.2);
 }
 
 .side_gap {
@@ -57,6 +93,7 @@ li {
   min-height: 110vh;
   z-index: -3;
   background: url('../assets/Image/background.jpg') no-repeat center/cover;
+  background-attachment: fixed;
 }
 
 .service_showcase {
@@ -93,6 +130,35 @@ li {
 }
 
 
+.card_stats {
+  font-size: 72px;
+  font-weight: 700;
+  font-family: var(--font-inter);
+  position: relative;
+  text-align: start;
+}
+
+.card_stats::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  bottom: 0;
+}
+
+.services_count::after{
+  content:'';
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:0.5px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
 @media screen and (max-width: 768px) {
   .banner-section-background::after {
     content: '';
@@ -100,5 +166,17 @@ li {
     z-index: -2;
     inset: 0;
     background: url('../assets/Image/background-mask.jpg') repeat center;
+  }
+
+  .title2 {
+    font-size: 27px;
+  }
+
+  .copyright_text {
+    font-size: 25px;
+  }
+
+  .card_stats {
+    font-size: 40px;
   }
 }
