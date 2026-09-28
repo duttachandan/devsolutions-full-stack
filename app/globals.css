@@ -92,8 +92,17 @@ li {
   inset: 0;
   min-height: 110vh;
   z-index: -3;
-  background: url('../assets/Image/background.jpg') no-repeat center/cover;
+  background: url('../assets/Image/bold-light-leak-transition.jpg') no-repeat center/cover;
   background-attachment: fixed;
+}
+
+.banner-section-background::before {
+  content: "";
+  z-index: -1;
+  background-blend-mode: difference;
+  background-color: #06008452;
+  position: absolute;
+  inset: 0;
 }
 
 .service_showcase {
@@ -102,6 +111,7 @@ li {
   width: fit-content;
   margin-left: auto;
   cursor: pointer;
+
 }
 
 .service_showcase>span {
@@ -148,16 +158,19 @@ li {
   bottom: 0;
 }
 
-.services_count::after{
-  content:'';
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  height:0.5px;
+.services_count::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.5px;
   background: rgba(0, 0, 0, 0.2);
 }
 
+.content-ordinary {
+  font-family: "Inter", sans-serif;
+}
 
 @media screen and (max-width: 768px) {
   .banner-section-background::after {

@@ -4,6 +4,8 @@ import Style from "@/style/style.module.css"
 import AnimatedHeading from "@/components/AnimateHeading"
 import { FaArrowTurnUp } from "react-icons/fa6";
 import CountUp from "@/components/CountStart"
+import OrdinarySection from "@/components/OrdinarySection";
+
 
 export default function Home() {
   return (
@@ -23,7 +25,7 @@ export default function Home() {
               {/* Services */}
               <div
                 className="text-right text-white mb-10 
-              lg:absolute left-3.75 right-3.75 
+              lg:absolute left-3.75 right-3.75
               top-[18.531vw] pr-3.75 lg:pr-0 font-semibold">
                 <ul>
                   <li className="service_showcase" style={{ "--content": `"UI/UX Design"` } as React.CSSProperties}>
@@ -149,6 +151,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* <section className="about-section">
         <h2
           className={`${Style.font_baseNue} text-(--primary-color)
@@ -165,6 +168,10 @@ export default function Home() {
           {AnimatedHeading("The Company")}
         </h2>
       </section> */}
+
+      {/* From Ordinary to ExtraOrdinary */}
+      <OrdinarySection />
+
       <section className="min-h-screen"></section>
     </main>
   );
