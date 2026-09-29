@@ -14,12 +14,12 @@ export default function Home() {
       {/* Banner Section */}
       <section className="banner-section">
         <div
-          className="min-h-[110vh] flex items-end 
+          className="h-screen
         relative pt-25 pb-10 md:pt-37.5 md:pb-12">
-          <div className="">
-            <div className="">
+          <div className="flex h-full items-end">
+            <div className="w-full">
               {/* Established */}
-              <p className="copyright_text">
+              <p data-aos="fade-up" className="copyright_text">
                 ©19-26
               </p>
               {/* Services */}
@@ -42,34 +42,36 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div>
+              <div className="relative">
                 <h1
                   className={`${Style.font_baseNue} ${Style.main_heading} text-[30px]
-                sm:text-[8.575vw] text-nowrap xl:text-[96px] uppercase font-bold`}
+                sm:text-[8.575vw] text-nowrap uppercase font-bold`}
                 >
                   {AnimatedHeading("Brave")}
                   {AnimatedHeading("Wired")}
                 </h1>
-                <div className={`${Style.main_font_after} text-nowrap`}>
-                  <span className="text-[4.102vw] xl:text-[82px]">
+                <div className={`${Style.main_font_after} text-nowrap lg:ml-10`}>
+                  <span>
                     {AnimatedHeading("Digital")}
                   </span>
                   <span>
                     {AnimatedHeading("Solutions")}
                   </span>
                 </div>
+                <p
+                  data-aos="fade-up"
+                  className={`mt-4 lg:absolute bottom-[1.8vw] left-0
+                ${Style.subTtitle} ${Style.font_Inter}`}>
+                  BraveWired delivers
+                  cutting-edge <br /> IT solutions.
+                  We innovate for a smart hassle free growth
+                  and the future for your buisness.
+                </p>
               </div>
             </div>
-            <p data-aos="fade-up" className={`mt-4 ${Style.subTtitle}`}>
-              Techwave delivers
-              cutting-edge <br /> IT solutions.
-              We innovate for a smart hassle free growth
-              and the future for your buisness.
-            </p>
           </div>
         </div>
       </section>
-
 
       {/* Works We Have Done So Far */}
       <section className="py-12 md:py-37.5 services_count relative">
@@ -111,7 +113,7 @@ export default function Home() {
                 </div>
                 <div className="card_content mt-3.75">
                   <h3 className="font-medium text-[24px] text-nowrap mb-3">Websites Launched</h3>
-                  <p>Helping brands making there mark online.</p>
+                  <p className="text-gray-500">Helping brands making there mark online.</p>
                 </div>
               </div>
             </div>
@@ -122,7 +124,7 @@ export default function Home() {
                 </div>
                 <div className="card_content mt-3.75">
                   <h3 className="font-medium text-[24px] text-nowrap mb-3">Users Reached</h3>
-                  <p>Helping brands making there mark online.</p>
+                  <p className="text-gray-500">Helping brands making there mark online.</p>
                 </div>
               </div>
             </div>
@@ -133,7 +135,7 @@ export default function Home() {
                 </div>
                 <div className="card_content mt-3.75">
                   <h3 className="font-medium text-[24px] text-nowrap mb-3">Client Satisfaction Rate</h3>
-                  <p>Helping brands making there mark online.</p>
+                  <p className="text-gray-500">Helping brands making there mark online.</p>
                 </div>
               </div>
             </div>
@@ -144,7 +146,7 @@ export default function Home() {
                 </div>
                 <div className="card_content mt-3.75">
                   <h3 className="font-medium text-[24px] text-nowrap mb-3">Years Of Expertise</h3>
-                  <p>Helping brands making there mark online.</p>
+                  <p className="text-gray-500">Helping brands making there mark online.</p>
                 </div>
               </div>
             </div>
@@ -152,25 +154,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="about-section">
-        <h2
-          className={`${Style.font_baseNue} text-(--primary-color)
-          text-[8.412vw] xl:text-[80px] uppercase font-bold text-nowrap`}
-        >
-          {AnimatedHeading("Services")}
-        </h2>
-      </section>
-      <section className="about-section">
-        <h2
-          className={`${Style.font_baseNue} text-(--primary-color)
-          text-[8.412vw] xl:text-[80px] uppercase font-bold text-nowrap`}
-        >
-          {AnimatedHeading("The Company")}
-        </h2>
-      </section> */}
-
       {/* From Ordinary to ExtraOrdinary */}
       <OrdinarySection />
+
+      <section className="about-section py-17.5 md:py-37.5">
+        <h2
+          data-aos="fade-up"
+          className={`${Style.font_Inter} 
+          text-black text-center text-[30px]
+          md:text-[8.412vw] xl:text-[80px] 
+          font-bold`}
+        >
+          Your Goals, Our Priority
+        </h2>
+        <p
+          data-aos="fade-up"
+          className={`${Style.font_Inter} mt-10 md:mt-20
+        text-center text-gray-500 max-w-150 mx-auto`}>
+          From concept to launch, we're committed to your success with rapid response times and personalized attention to detail.
+        </p>
+      </section>
 
       <section className="min-h-screen"></section>
     </main>

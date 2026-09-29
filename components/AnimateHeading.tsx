@@ -30,7 +30,7 @@ export default function AnimatedHeading(text: string) {
                     stagger: 0.05,
                     scrollTrigger: {
                         trigger: sectionRef.current,
-                        start: "top 80%",
+                        start: "top 90%",
                         toggleActions: "play none none reverse",
                     },
                 }

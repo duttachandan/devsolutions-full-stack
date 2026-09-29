@@ -46,7 +46,7 @@ const CountUp = ({ target, duration = 2 }: CountUpProps) => {
     };
   }, [target, duration]);
 
-  return <span ref={countRef}>0</span>;
+  return <span className="" ref={countRef}>0</span>;
 };
 
 export default CountUp;

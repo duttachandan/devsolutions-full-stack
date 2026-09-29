@@ -8,6 +8,10 @@
     font-family: var(--font-baseNue);
 }
 
+.font_Inter{
+    font-family: "Inter", sans-serif;
+}
+
 .bg_primary {
     background: var(--primary-color);
     color: var(--secondary-color);
@@ -156,7 +160,7 @@
 }
 
 .main_font_after {
-    font-size: 12px;
+    font-size: 42px;
     font-family: var(--font-baseNue);
     letter-spacing: 5px;
     text-align: end;
@@ -198,13 +202,12 @@
     max-width: 400px;
     color: white;
     font-family: "Inter", sans-serif;
-    font-weight: 700;
 }
 
 
 @media screen and (min-width: 1280px) {
     .main_font_after>span {
-        font-size: 82px;
+        font-size: 8.575vw;
     }
 }
 
