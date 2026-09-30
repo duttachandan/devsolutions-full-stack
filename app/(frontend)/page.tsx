@@ -19,14 +19,17 @@ export default function Home() {
           <div className="flex h-full items-end">
             <div className="w-full">
               {/* Established */}
-              <p data-aos="fade-up" className="copyright_text">
+              <p 
+              data-aos="fade-up" 
+              className={`copyright_text ${Style.font_Inter}`}
+              >
                 ©19-26
               </p>
               {/* Services */}
               <div
                 className="text-right text-white mb-10 
               lg:absolute left-3.75 right-3.75
-              top-[18.531vw] pr-3.75 lg:pr-0 font-semibold">
+              top-[13.531vw] pr-3.75 lg:pr-0 font-semibold">
                 <ul>
                   <li className="service_showcase" style={{ "--content": `"UI/UX Design"` } as React.CSSProperties}>
                     <span>UI/UX Design</span>
@@ -61,7 +64,7 @@ export default function Home() {
                 <p
                   data-aos="fade-up"
                   className={`mt-4 lg:absolute bottom-[1.8vw] left-0
-                ${Style.subTtitle} ${Style.font_Inter}`}>
+                  ${Style.subTtitle} ${Style.font_Inter}`}>
                   BraveWired delivers
                   cutting-edge <br /> IT solutions.
                   We innovate for a smart hassle free growth
@@ -174,7 +177,6 @@ export default function Home() {
           From concept to launch, we're committed to your success with rapid response times and personalized attention to detail.
         </p>
       </section>
-
       <section className="min-h-screen"></section>
     </main>
   );

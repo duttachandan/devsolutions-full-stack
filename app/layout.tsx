@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import SmoothScroll from "@/components/smooth-scroll";
-import ScrollLogger from "@/components/scrollLogger";
 import AOSInit from "@/components/AOS";
 import "aos/dist/aos.css";
 import { Inter } from "next/font/google";
@@ -28,7 +27,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="side_gap">
           <Navbar />
           <SmoothScroll>
-            {/* <ScrollLogger /> */}
             <main className="min-h-screen">
               {children}
             </main>
