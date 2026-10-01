@@ -1,11 +1,9 @@
 "use client"
-
 import Style from "@/style/style.module.css"
 import AnimatedHeading from "@/components/AnimateHeading"
 import { FaArrowTurnUp } from "react-icons/fa6";
 import CountUp from "@/components/CountStart"
 import OrdinarySection from "@/components/OrdinarySection";
-
 
 export default function Home() {
   return (
@@ -19,9 +17,9 @@ export default function Home() {
           <div className="flex h-full items-end">
             <div className="w-full">
               {/* Established */}
-              <p 
-              data-aos="fade-up" 
-              className={`copyright_text ${Style.font_Inter}`}
+              <p
+                data-aos="fade-up"
+                className={`copyright_text ${Style.font_Inter}`}
               >
                 ©19-26
               </p>
@@ -48,17 +46,16 @@ export default function Home() {
               <div className="relative">
                 <h1
                   className={`${Style.font_baseNue} ${Style.main_heading} text-[30px]
-                sm:text-[8.575vw] text-nowrap uppercase font-bold`}
+                sm:text-[8.575vw] text-nowrap font-bold`}
                 >
-                  {AnimatedHeading("Brave")}
-                  {AnimatedHeading("Wired")}
+                  {AnimatedHeading("Engineering")}
                 </h1>
                 <div className={`${Style.main_font_after} text-nowrap lg:ml-10`}>
                   <span>
-                    {AnimatedHeading("Digital")}
+                    {AnimatedHeading("Your")}
                   </span>
                   <span>
-                    {AnimatedHeading("Solutions")}
+                    {AnimatedHeading("Future")}
                   </span>
                 </div>
                 <p
@@ -173,10 +170,26 @@ export default function Home() {
         <p
           data-aos="fade-up"
           className={`${Style.font_Inter} mt-10 md:mt-20
-        text-center text-gray-500 max-w-150 mx-auto`}>
+          text-center text-gray-500 max-w-150 mx-auto`}>
           From concept to launch, we're committed to your success with rapid response times and personalized attention to detail.
         </p>
+        {/* Post Production Support */}
+        <div className="flex flex-wrap mx-[-7.5px] mt-10">
+          <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
+            <div className="min-h-50 border border-gray-300"></div>
+          </div>
+          <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
+            <div className="min-h-50 border border-gray-300"></div>
+          </div>
+          <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
+            <div className="min-h-50 border border-gray-300"></div>
+          </div>
+          <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
+            <div className="min-h-50 border border-gray-300"></div>
+          </div>
+        </div>
       </section>
+
       <section className="min-h-screen"></section>
     </main>
   );

@@ -71,8 +71,8 @@ li {
 .side_gap {
   height: 100%;
   margin: 0 15px;
-  border-right: 0.3px solid rgba(66, 66, 66, 0.2);
-  border-left: 0.3px solid rgba(66, 66, 66, 0.2);
+  /* border-right: 0.3px solid rgba(66, 66, 66, 0.2);
+  border-left: 0.3px solid rgba(66, 66, 66, 0.2); */
 }
 
 .social-links {

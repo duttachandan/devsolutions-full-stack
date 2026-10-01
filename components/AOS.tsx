@@ -2,16 +2,41 @@
 
 import { useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function AOSInit() {
     useEffect(() => {
         AOS.init({
+            duration: 1000,
+            once: true,
             offset: 100,
-            duration: 500,
-            easing: "ease-in-sine",
-            delay: 0,
         });
+
+        const handleLoaderComplete = () => {
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+
+                    AOS.refreshHard();
+
+                    /*
+                     * Force AOS to check the current viewport.
+                     */
+                    window.dispatchEvent(new Event("scroll"));
+
+                });
+            });
+        };
+
+        window.addEventListener(
+            "loaderComplete",
+            handleLoaderComplete
+        );
+
+        return () => {
+            window.removeEventListener(
+                "loaderComplete",
+                handleLoaderComplete
+            );
+        };
     }, []);
 
     return null;
