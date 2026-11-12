@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
-import bg from "@/assets/Image/vOFoMV3UDuqKgUksSbkRhTzIp4I.jpg"
+import bg from "@/assets/Image/banner2.jpg"
 import gsap from 'gsap';
 import { BsArrowDown } from "react-icons/bs";
 

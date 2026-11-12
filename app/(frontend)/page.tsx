@@ -4,6 +4,8 @@ import AnimatedHeading from "@/components/AnimateHeading"
 import { FaArrowTurnUp } from "react-icons/fa6";
 import CountUp from "@/components/CountStart"
 import OrdinarySection from "@/components/OrdinarySection";
+import Image from "next/image"
+import NokiaHand from "@/assets/Image/nokia_hand.avif"
 
 export default function Home() {
   return (
@@ -106,7 +108,7 @@ export default function Home() {
           >
             <div
               className="card px-3.75 overflow-hidden
-            w-full md:w-1/2 lg:w-1/4 mb-3">
+              w-full md:w-1/2 lg:w-1/4 mb-3">
               <div data-aos="fade-left">
                 <div className="card_stats">
                   {CountUp({ target: 17 })}+
@@ -176,16 +178,32 @@ export default function Home() {
         {/* Post Production Support */}
         <div className="flex flex-wrap mx-[-7.5px] mt-10">
           <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
-            <div className="min-h-50 border border-gray-300"></div>
+            <div className="min-h-50 border border-gray-300 w-full">
+              <Image
+                width={528}
+                height={528}
+                className="w-full h-87.5 object-cover"
+                src={NokiaHand}
+                alt="nokia hand sign"
+              />
+              <div className="px-7.5 pb-7.5 mt-5.5">
+                <h3 className={`${Style.font_Inter} text-[22px] font-semibold`}>24/7 priority care</h3>
+                <p className={`text-black/30 ${Style.font_Inter}`}>
+                  Receive priority treatment for urgent tasks, with an
+                  <span className="text-black">average response time of 24 hours</span>
+                  for high-priority clients.
+                </p>
+              </div>
+            </div>
           </div>
           <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
-            <div className="min-h-50 border border-gray-300"></div>
+            <div className="min-h-50 bg-[#f5f5f5]"></div>
           </div>
           <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
-            <div className="min-h-50 border border-gray-300"></div>
+            <div className="min-h-50 bg-[#0c0c0c]"></div>
           </div>
           <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
-            <div className="min-h-50 border border-gray-300"></div>
+            <div className={`min-h-50 ${Style.Bg_card}`}></div>
           </div>
         </div>
       </section>

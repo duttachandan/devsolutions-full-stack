@@ -204,6 +204,12 @@
     font-family: "Inter", sans-serif;
 }
 
+.Bg_card{
+    background: url("../assets/Image/face_wallpaper.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 
 @media screen and (min-width: 1280px) {
     .main_font_after>span {
