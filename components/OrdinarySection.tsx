@@ -44,33 +44,37 @@ const OrdinarySection = () => {
             items-center justify-center py-17.5
             section-oridinary md:py-37.5"
         >
-            <div className="flex items-center justify-center">
-                <div className="max-w-228.5 w-full">
-                    <Image
-                        ref={ImageRef}
-                        width={1920}
-                        height={1080}
-                        quality={100}
-                        className="w-full object-contain"
-                        src={bg}
-                        alt=""
-                    />
-                </div>
-                <h2
-                    data-aos="fade-up"
-                    className="absolute top-1/2 left-1/2 -translate-1/2 content-ordinary w-full
+            <div className="px-3.75 mx-auto max-w-[1848px]">
+                <div className="flex items-center justify-center">
+                    <div className="max-w-228.5 w-full">
+                        <Image
+                            ref={ImageRef}
+                            width={1920}
+                            height={1080}
+                            quality={100}
+                            className="w-full object-contain grayscale-90"
+                            src={bg}
+                            alt=""
+                        />
+                    </div>
+                    <h2
+                        data-aos="fade-up"
+                        className="absolute top-1/2 left-1/2 -translate-1/2 content-ordinary w-full
                     text-[30px] md:text-[70px] lg:text-[120px] xl:text-[150px] text-center font-semibold
-            z-1 text-white mix-blend-difference">
-                    From ordinary
-                    <br />
-                    to extra ordinary
-                </h2>
-            </div>
-            <div
-                className='absolute left-1/2 top-full p-5 
-            rounded-full bg-black text-white 
-            -translate-1/2'>
-                <BsArrowDown />
+                    z-1 text-white mix-blend-difference"
+                    >
+                        From ordinary
+                        <br />
+                        to extra ordinary
+                    </h2>
+                </div>
+                <div
+                    className='absolute left-1/2 top-full p-5 
+                rounded-full bg-black text-white 
+                -translate-1/2'
+                >
+                    <BsArrowDown />
+                </div>
             </div>
         </section>
     )

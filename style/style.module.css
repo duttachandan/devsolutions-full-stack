@@ -123,8 +123,6 @@
 
 .navbar_btn:hover>span::after {
     transform: translateY(-20px);
-    /* transform: translateY(-18px); */
-    /* text-shadow:2px 2px 50px rgba(0,0,0,0.5); */
 }
 
 .navbar_btn>svg {
@@ -213,7 +211,16 @@
 
 @media screen and (min-width: 1280px) {
     .main_font_after>span {
-        font-size: 8.575vw;
+        font-size: 7.575vw;
+    }
+}
+
+@media  screen and (min-width: 2200px) {
+    .main_heading{
+        font-size:193px;
+    }
+    .main_font_after>span{
+        font-size:170px;
     }
 }
 

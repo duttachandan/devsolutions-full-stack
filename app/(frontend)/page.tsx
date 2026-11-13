@@ -6,6 +6,18 @@ import CountUp from "@/components/CountStart"
 import OrdinarySection from "@/components/OrdinarySection";
 import Image from "next/image"
 import NokiaHand from "@/assets/Image/nokia_hand.avif"
+import closeup_girl from "@/assets/Image/closeup-young-girl.jpg"
+import handsome_glass from "@/assets/Image/handsome-guy-glass.jpg"
+import isolated_guy from "@/assets/Image/isolated-gray-guy.jpg"
+import Checkbox from "@/components/Checkbox";
+import { IoFolderOpenOutline } from "react-icons/io5";
+import { IoEyedrop } from "react-icons/io5";
+import { IoImages } from "react-icons/io5";
+import { PiTextAa } from "react-icons/pi";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { GoStack } from "react-icons/go";
+import { FiDownloadCloud } from "react-icons/fi";
+import MobileScreen from "@/assets/Image/mobileScreen.avif"
 
 export default function Home() {
   return (
@@ -13,62 +25,64 @@ export default function Home() {
       <div className="banner-section-background"></div>
       {/* Banner Section */}
       <section className="banner-section">
-        <div
-          className="h-screen
-        relative pt-25 pb-10 md:pt-37.5 md:pb-12">
-          <div className="flex h-full items-end">
-            <div className="w-full">
-              {/* Established */}
-              <p
-                data-aos="fade-up"
-                className={`copyright_text ${Style.font_Inter}`}
-              >
-                ©19-26
-              </p>
-              {/* Services */}
-              <div
-                className="text-right text-white mb-10 
-              lg:absolute left-3.75 right-3.75
-              top-[13.531vw] pr-3.75 lg:pr-0 font-semibold">
-                <ul>
-                  <li className="service_showcase" style={{ "--content": `"UI/UX Design"` } as React.CSSProperties}>
-                    <span>UI/UX Design</span>
-                  </li>
-                  <li className="service_showcase" style={{ "--content": `"Development"` } as React.CSSProperties}>
-                    <span>Development</span>
-                  </li>
-                  <li className="service_showcase" style={{ "--content": `"Brand Identity Design"` } as React.CSSProperties}>
-                    <span>Brand Identity Design</span>
-                  </li>
-                  <li className="service_showcase" style={{ "--content": `"Ongoing Support"` } as React.CSSProperties}>
-                    <span>Ongoing Support</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="relative">
-                <h1
-                  className={`${Style.font_baseNue} ${Style.main_heading} text-[30px]
-                sm:text-[8.575vw] text-nowrap font-bold`}
-                >
-                  {AnimatedHeading("Engineering")}
-                </h1>
-                <div className={`${Style.main_font_after} text-nowrap lg:ml-10`}>
-                  <span>
-                    {AnimatedHeading("Your")}
-                  </span>
-                  <span>
-                    {AnimatedHeading("Future")}
-                  </span>
-                </div>
+        <div className="mx-auto px-3.75 max-w-[1848px]">
+          <div
+            className="h-screen
+          relative pt-25 pb-10 md:pt-37.5 md:pb-12">
+            <div className="flex h-full items-end">
+              <div className="w-full">
+                {/* Established */}
                 <p
                   data-aos="fade-up"
-                  className={`mt-4 lg:absolute bottom-[1.8vw] left-0
-                  ${Style.subTtitle} ${Style.font_Inter}`}>
-                  BraveWired delivers
-                  cutting-edge <br /> IT solutions.
-                  We innovate for a smart hassle free growth
-                  and the future for your buisness.
+                  className={`copyright_text ${Style.font_Inter}`}
+                >
+                  ©19-26
                 </p>
+                {/* Services */}
+                <div
+                  className="text-right text-white mb-10 lg:absolute left-3.75 right-3.75
+                top-[13.531vw] pr-3.75 lg:pr-0 font-semibold"
+                >
+                  <ul>
+                    <li className="service_showcase" style={{ "--content": `"UI/UX Design"` } as React.CSSProperties}>
+                      <span>UI/UX Design</span>
+                    </li>
+                    <li className="service_showcase" style={{ "--content": `"Development"` } as React.CSSProperties}>
+                      <span>Development</span>
+                    </li>
+                    <li className="service_showcase" style={{ "--content": `"Brand Identity Design"` } as React.CSSProperties}>
+                      <span>Brand Identity Design</span>
+                    </li>
+                    <li className="service_showcase" style={{ "--content": `"Ongoing Support"` } as React.CSSProperties}>
+                      <span>Ongoing Support</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="relative">
+                  <h1
+                    className={`${Style.font_baseNue} ${Style.main_heading} text-[30px]
+                    sm:text-[7.575vw] text-nowrap font-bold`}
+                  >
+                    {AnimatedHeading("Engineering")}
+                  </h1>
+                  <div className={`${Style.main_font_after} text-nowrap lg:ml-10`}>
+                    <span>
+                      {AnimatedHeading("Your")}
+                    </span>
+                    <span>
+                      {AnimatedHeading("Future")}
+                    </span>
+                  </div>
+                  <p
+                    data-aos="fade-up"
+                    className={`mt-4 lg:absolute bottom-[1.8vw] left-0
+                  ${Style.subTtitle} ${Style.font_Inter}`}>
+                    BraveWired delivers
+                    cutting-edge <br /> IT solutions.
+                    We innovate for a smart hassle free growth
+                    and the future for your buisness.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -77,7 +91,7 @@ export default function Home() {
 
       {/* Works We Have Done So Far */}
       <section className="py-12 md:py-37.5 services_count relative">
-        <div className="container-fluid">
+        <div className="px-3.75 mx-auto max-w-[1848px]">
           <div
             className="flex flex-col md:flex-row 
           items-start md:items-center gap-9 md:gap-28 flex-wrap 
@@ -160,53 +174,159 @@ export default function Home() {
       <OrdinarySection />
 
       <section className="about-section py-17.5 md:py-37.5">
-        <h2
-          data-aos="fade-up"
-          className={`${Style.font_Inter} 
+        <div className="px-3.75 mx-auto max-w-[1848px]">
+          <h2
+            data-aos="fade-up"
+            className={`${Style.font_Inter} 
           text-black text-center text-[30px]
           md:text-[8.412vw] xl:text-[80px] 
           font-bold`}
-        >
-          Your Goals, Our Priority
-        </h2>
-        <p
-          data-aos="fade-up"
-          className={`${Style.font_Inter} mt-10 md:mt-20
+          >
+            Your Goals, Our Priority
+          </h2>
+          <p
+            data-aos="fade-up"
+            className={`${Style.font_Inter} mt-10 md:mt-20
           text-center text-gray-500 max-w-150 mx-auto`}>
-          From concept to launch, we're committed to your success with rapid response times and personalized attention to detail.
-        </p>
-        {/* Post Production Support */}
-        <div className="flex flex-wrap mx-[-7.5px] mt-10">
-          <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
-            <div className="min-h-50 border border-gray-300 w-full">
-              <Image
-                width={528}
-                height={528}
-                className="w-full h-87.5 object-cover"
-                src={NokiaHand}
-                alt="nokia hand sign"
-              />
-              <div className="px-7.5 pb-7.5 mt-5.5">
-                <h3 className={`${Style.font_Inter} text-[22px] font-semibold`}>24/7 priority care</h3>
-                <p className={`text-black/30 ${Style.font_Inter}`}>
-                  Receive priority treatment for urgent tasks, with an
-                  <span className="text-black">average response time of 24 hours</span>
-                  for high-priority clients.
+            From concept to launch, we're committed to your success with rapid response times and personalized attention to detail.
+          </p>
+          {/* Post Production Support */}
+          <div className="flex items-stretch flex-wrap mx-[-7.5px] mt-10">
+            {/* First Slide */}
+            <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
+              <div className="min-h-50 border border-gray-300 w-full">
+                <Image
+                  width={528}
+                  height={528}
+                  className="w-full h-87.5 object-cover"
+                  src={NokiaHand}
+                  alt="nokia hand sign"
+                />
+                <div className="px-7.5 pb-7.5 mt-7.5">
+                  <h3 className={`${Style.font_Inter} text-[22px] font-semibold mb-3.5`}>24/7 priority care</h3>
+                  <p className={`text-black/50 ${Style.font_Inter} text-[11px]`}>
+                    Receive priority treatment for urgent tasks, with an
+                    {" "}
+                    <span className="text-black">average response time of 24 hours</span>
+                    {" "}
+                    for high-priority clients.
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* Second Slide */}
+            <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
+              <div className="min-h-50 bg-[#f5f5f5] h-full md:p-10 p-7.5 top-0 right-0">
+                <h3 className={`${Style.font_Inter} text-[22px] font-semibold mb-3.5 capitalize`}>
+                  Tailored tweaks for perfection
+                </h3>
+                <p className={`text-black/50 ${Style.font_Inter} text-[11px]`}>
+                  Request custom revisions at any time. We provide <span className="text-black">up to 5 minor revisions</span> post-launch to keep things looking fresh.
                 </p>
+                <div className="flex gap-1.5 my-5">
+                  <div className="rounded-full h-10 overflow-hidden w-10">
+                    <Image width={200} height={200} className="object-cover h-full w-full" src={closeup_girl} alt="Image of profiles" />
+                  </div>
+                  <div className="rounded-full h-10 overflow-hidden w-10 opacity-50">
+                    <Image width={200} height={200} className="object-cover h-full w-full" src={handsome_glass} alt="Image of profiles" />
+                  </div>
+                  <div className="rounded-full h-10 overflow-hidden w-10 opacity-50">
+                    <Image width={200} height={200} className="object-cover h-full w-full" src={isolated_guy} alt="Image of profiles" />
+                  </div>
+                  <div className="rounded-full h-10 overflow-hidden w-10 opacity-50">
+                    <Image width={200} height={200} className="object-cover h-full w-full" src={isolated_guy} alt="Image of profiles" />
+                  </div>
+                </div>
+                <h4 className="mb-3 capitalize font-medium">Post-Launch requests </h4>
+                <div className={`pr-5 pb-4 ${Style.font_Inter}`}>
+                  <div className="flex items-center mb-2">
+                    <Checkbox className="cbx-12" />
+                    <label className={`text-[10px] ${Style.font_Inter} capitalize`} htmlFor="cbx-12">Align text margins properly</label>
+                  </div>
+                  <div className="flex items-center mb-2">
+                    <Checkbox className="increase_font" />
+                    <label className={`text-[10px] ${Style.font_Inter} capitalize`} htmlFor="increase_font">Increase mobile menu font size</label>
+                  </div>
+                  <div className="flex items-center mb-2">
+                    <Checkbox className="replace_images" />
+                    <label className={`text-[10px] ${Style.font_Inter} capitalize`} htmlFor="replace_images">Replace Images</label>
+                  </div>
+                  <div className="flex items-center mb-2">
+                    <Checkbox className="fix_btn" />
+                    <label className={`text-[10px] ${Style.font_Inter} capitalize`} htmlFor="fix_btn">Fix button color: #f5f5f5</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Third Slide */}
+            <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
+              <div className="min-h-50 bg-[#0c0c0c] h-full border_inside p-7.5 pt-15">
+                <span></span>
+                <span></span>
+                <div className={`text-center text-white ${Style.font_Inter}`}>
+                  <p className="text-[13px]">Download Brand Kit</p>
+                  <div className="flex gap-2.5 items-center justify-center mt-4">
+                    <IoFolderOpenOutline style={{ color: "gray" }} />
+                    <IoEyedrop style={{ color: "gray" }} />
+                    <IoImages style={{ color: "gray" }} />
+                    <PiTextAa style={{ color: "gray" }} />
+                    <RxHamburgerMenu style={{ color: "gray" }} />
+                    <GoStack style={{ color: "gray" }} />
+                  </div>
+                  <div className="flex items-center justify-center mt-15">
+                    <div className="relative h-25 flex justify-center items-center w-25 rounded-full bg-[#EE363D]">
+                      <span
+                        className="absolute inline-block -inset-2.5 rounded-full border-2"
+                        style={{ border: "1px solid gray" }}
+                      ></span>
+                      <span className="absolute inline-block top-1/2 left-1/2 -translate-1/2 
+                    h-10 w-10 rounded-full blur-xl bg-white z-10"
+                      ></span>
+                      <FiDownloadCloud style={{ color: "white" }} size={24} />
+                    </div>
+                  </div>
+                  <h4 className="mt-8 capitalize text-[22px] font-bold">Brand kit at your fingertips</h4>
+                  <p className="text-[11px] my-8">
+                    Receive a full branding toolkit,
+                    from logos to color schemes and typography,{" "}
+                    <br />
+                    <span className="font-bold">download all assets</span>{" "} or share them with your team.
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* Fourth Slide */}
+            <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
+              <div className={`min-h-100 relative ${Style.Bg_card} h-full w-full overflow-hidden`}>
+                <div className="bottom-0 absolute left-4.5 right-4.5">
+                  <div className="w-fit relative mx-auto h-fit">
+                    <span
+                      className="absolute inset-0 backdrop-blur-[6px] 
+                      z-1 bg-white/50 top-1 rounded-t-[50px]"
+                    ></span>
+                    <Image width={498}
+                      className="w-full relative z-2 max-h-100 h-full object-contain"
+                      src={MobileScreen}
+                      alt="mobile screen"
+                    />
+                    <div
+                      className={`
+                        time text-white absolute 
+                        top-20 left-0 right-0 z-2 text-center 
+                        text-6xl ${Style.font_Inter} font-semibold`}
+                    >10:45</div>
+                    <div className="notification">
+
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
-            <div className="min-h-50 bg-[#f5f5f5]"></div>
-          </div>
-          <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
-            <div className="min-h-50 bg-[#0c0c0c]"></div>
-          </div>
-          <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
-            <div className={`min-h-50 ${Style.Bg_card}`}></div>
-          </div>
         </div>
+
       </section>
+
 
       <section className="min-h-screen"></section>
     </main>
