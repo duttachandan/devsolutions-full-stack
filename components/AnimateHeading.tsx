@@ -49,7 +49,6 @@ export default function AnimatedHeading(text: string) {
             requestAnimationFrame(() => {
                 requestAnimationFrame(() => {
                     startAnimation();
-
                     ScrollTrigger.refresh();
                 });
             });
@@ -65,7 +64,6 @@ export default function AnimatedHeading(text: string) {
                 "loaderComplete",
                 handleLoaderComplete
             );
-
             ctx?.revert();
         };
     }, []);
@@ -79,7 +77,6 @@ export default function AnimatedHeading(text: string) {
                         className="letter"
                         style={{
                             display: "inline-block",
-
                             /*
                              * IMPORTANT:
                              * The letters are invisible BEFORE
@@ -96,3 +93,4 @@ export default function AnimatedHeading(text: string) {
         </span>
     );
 }
+

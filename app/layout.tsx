@@ -31,15 +31,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <Loader />
         <AOSInit />
-        <div className="side_gap">
-          <Navbar />
-          <SmoothScroll>
-            <main className="min-h-screen">
-              {children}
-            </main>
-          </SmoothScroll>
-        </div>
+        <Navbar />
+        <SmoothScroll>
+          <main className="min-h-screen">
+            {children}
+          </main>
+        </SmoothScroll>
+        {/* <div className="side_gap">
+        </div> */}
       </body>
     </html>
   );
-}
+};

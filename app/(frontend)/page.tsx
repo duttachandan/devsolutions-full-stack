@@ -18,8 +18,24 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { GoStack } from "react-icons/go";
 import { FiDownloadCloud } from "react-icons/fi";
 import MobileScreen from "@/assets/Image/mobileScreen.avif"
+import SelectedWork from "@/components/StickyCard";
+import { useState } from "react";
 
 export default function Home() {
+  const [checkedItems, setCheckedItems] = useState({
+    cbx_12: false,
+    increase_font: false,
+    replace_images: false,
+    fix_btn: false,
+  });
+
+  const handleCheckboxChange = (id: string, checked: boolean) => {
+    setCheckedItems((prev) => ({
+      ...prev,
+      [id]: checked,
+    }));
+  };
+
   return (
     <main>
       <div className="banner-section-background"></div>
@@ -108,8 +124,8 @@ export default function Home() {
             <div
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="title2 font-medium 
-            flex-1 text-(--font-inter)">
+              className={`title2 font-medium 
+            flex-1 text-(--font-inter) ${Style.font_Inter}`}>
               Our work speaks through numbers.
               <br />
               Here’s what we’ve achieved so far.
@@ -177,7 +193,7 @@ export default function Home() {
         <div className="px-3.75 mx-auto max-w-[1848px]">
           <h2
             data-aos="fade-up"
-            className={`${Style.font_Inter} 
+            className={`${Style.font_Inter_h2} 
           text-black text-center text-[30px]
           md:text-[8.412vw] xl:text-[80px] 
           font-bold`}
@@ -193,7 +209,7 @@ export default function Home() {
           {/* Post Production Support */}
           <div className="flex items-stretch flex-wrap mx-[-7.5px] mt-10">
             {/* First Slide */}
-            <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
+            <div className="px-[7.5px] w-full md:w-1/2 xl:w-1/4 mb-5">
               <div className="min-h-50 border border-gray-300 w-full">
                 <Image
                   width={528}
@@ -215,7 +231,7 @@ export default function Home() {
               </div>
             </div>
             {/* Second Slide */}
-            <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
+            <div className="px-[7.5px] w-full md:w-1/2 xl:w-1/4 mb-5">
               <div className="min-h-50 bg-[#f5f5f5] h-full md:p-10 p-7.5 top-0 right-0">
                 <h3 className={`${Style.font_Inter} text-[22px] font-semibold mb-3.5 capitalize`}>
                   Tailored tweaks for perfection
@@ -240,26 +256,65 @@ export default function Home() {
                 <h4 className="mb-3 capitalize font-medium">Post-Launch requests </h4>
                 <div className={`pr-5 pb-4 ${Style.font_Inter}`}>
                   <div className="flex items-center mb-2">
-                    <Checkbox className="cbx-12" />
-                    <label className={`text-[10px] ${Style.font_Inter} capitalize`} htmlFor="cbx-12">Align text margins properly</label>
+                    <Checkbox
+                      className="cbx_12"
+                      onChange={(checked) => handleCheckboxChange("cbx_12", checked)}
+                    />
+
+                    <label
+                      htmlFor="cbx_12"
+                      className={`text-[10px] ${Style.font_Inter} capitalize ${checkedItems["cbx_12"] ? "line-through text-gray-400" : ""
+                        }`}
+                    >
+                      Align text margins properly
+                    </label>
                   </div>
                   <div className="flex items-center mb-2">
-                    <Checkbox className="increase_font" />
-                    <label className={`text-[10px] ${Style.font_Inter} capitalize`} htmlFor="increase_font">Increase mobile menu font size</label>
+                    <Checkbox
+                      className="increase_font"
+                      onChange={(checked) => handleCheckboxChange("increase_font", checked)}
+                    />
+
+                    <label
+                      htmlFor="increase_font"
+                      className={`text-[10px] ${Style.font_Inter} capitalize ${checkedItems.increase_font ? "line-through text-gray-400" : ""
+                        }`}
+                    >
+                      Increase mobile menu font size
+                    </label>
                   </div>
                   <div className="flex items-center mb-2">
-                    <Checkbox className="replace_images" />
-                    <label className={`text-[10px] ${Style.font_Inter} capitalize`} htmlFor="replace_images">Replace Images</label>
+                    <Checkbox
+                      className="replace_images"
+                      onChange={(checked) => handleCheckboxChange("replace_images", checked)}
+                    />
+
+                    <label
+                      htmlFor="replace_images"
+                      className={`text-[10px] ${Style.font_Inter} capitalize ${checkedItems.replace_images ? "line-through text-gray-400" : ""
+                        }`}
+                    >
+                      Replace Images
+                    </label>
                   </div>
                   <div className="flex items-center mb-2">
-                    <Checkbox className="fix_btn" />
-                    <label className={`text-[10px] ${Style.font_Inter} capitalize`} htmlFor="fix_btn">Fix button color: #f5f5f5</label>
+                    <Checkbox
+                      className="fix_btn"
+                      onChange={(checked) => handleCheckboxChange("fix_btn", checked)}
+                    />
+                    <label
+                      htmlFor="fix_btn"
+                      className={`text-[10px] ${Style.font_Inter} capitalize ${checkedItems.fix_btn ? "line-through text-gray-400" : ""
+                        }`}
+                    >
+                      Fix button color: #f5f5f5
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
             {/* Third Slide */}
-            <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
+            <div className="px-[7.5px] w-full md:w-1/2 xl:w-1/4 mb-5">
               <div className="min-h-50 bg-[#0c0c0c] h-full border_inside p-7.5 pt-15">
                 <span></span>
                 <span></span>
@@ -286,17 +341,17 @@ export default function Home() {
                     </div>
                   </div>
                   <h4 className="mt-8 capitalize text-[22px] font-bold">Brand kit at your fingertips</h4>
-                  <p className="text-[11px] my-8">
+                  <p className="text-[11px] my-8 text-gray-500">
                     Receive a full branding toolkit,
                     from logos to color schemes and typography,{" "}
                     <br />
-                    <span className="font-bold">download all assets</span>{" "} or share them with your team.
+                    <span className="font-bold text-white">download all assets</span>{" "} or share them with your team.
                   </p>
                 </div>
               </div>
             </div>
             {/* Fourth Slide */}
-            <div className="px-[7.5px] w-full md:w-1/2 lg:w-1/4 mb-5">
+            <div className="px-[7.5px] w-full md:w-1/2 xl:w-1/4 mb-5">
               <div className={`min-h-100 relative ${Style.Bg_card} h-full w-full overflow-hidden`}>
                 <div className="bottom-0 absolute left-4.5 right-4.5">
                   <div className="w-fit relative mx-auto h-fit">
@@ -315,20 +370,69 @@ export default function Home() {
                         top-20 left-0 right-0 z-2 text-center 
                         text-6xl ${Style.font_Inter} font-semibold`}
                     >10:45</div>
-                    <div className="notification">
-
+                    <div
+                      className="notification absolute top-45 flex items-center gap-2 shadow-lg
+                      px-5 py-2 z-20 -left-2.5 -right-2.5 bg-white rounded-xl"
+                    >
+                      <Image
+                        width={250}
+                        height={250}
+                        className="h-12.5 w-12.5 rounded-full object-cover"
+                        src={closeup_girl}
+                        alt="Developer photo"
+                      />
+                      <div className="">
+                        <div className="top flex items-center gap-2">
+                          <h5 className="text-[12px] font-semibold">Designer</h5>
+                          <div className="text-[11px] text-black/50">Today 09:17</div>
+                        </div>
+                        <div className="bottom text-[11px] text-black/50 pt-1 font-medium">
+                          Logo update complete,
+                          <br />
+                          ready for your review!
+                        </div>
+                      </div>
                     </div>
+                    <div className="absolute top-44 -left-1 -right-1 bg-white blur-lg rounded-xl h-20 z-10"></div>
+                    <div className="absolute top-46 -left-1 -right-1 bg-white rounded-xl h-18 z-10"></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </section>
 
-
-      <section className="min-h-screen"></section>
+      {/* Selected Work Section */}
+      <section className="selected-work-section relative bg-white pb-20">
+        {/* Intro section */}
+        <div className="px-3.75 mx-auto max-w-[1848px] py-20">
+          <div className="text-center mb-3">
+            <span className="selected_work">
+              Selected Work
+            </span>
+          </div>
+          <h2
+            data-aos="fade-up"
+            className={`${Style.font_Inter_h2} text-black 
+            text-center text-[30px] md:text-[8.412vw] xl:text-[104px] font-bold`}
+          >
+            Proven results,
+            <br />
+            stunning designs
+          </h2>
+          <p
+            data-aos="fade-up"
+            className={`${Style.font_Inter} tracking-tighter font-semibold uppercase
+            text-6xl mt-10 md:mt-20 text-center text-black max-w-150 mx-auto`}
+          >
+            2k26
+          </p>
+        </div>
+        {/* Stacking cards */}
+        <SelectedWork />
+      </section>
+      {/* <section className="min-h-screen"></section> */}
     </main>
   );
 }

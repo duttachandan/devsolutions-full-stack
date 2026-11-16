@@ -1,10 +1,22 @@
-import React from 'react'
+import { useRef, Ref } from 'react'
 
-const Checkbox = ({className}: {className: string}) => {
+interface CheckboxProps {
+    className: string;
+    inputRef?: Ref<HTMLInputElement>;
+    onChange?: (checked: boolean) => void;
+}
+
+const Checkbox = ({ className, inputRef, onChange }: CheckboxProps) => {
+
     return (
         <div className="checkbox-wrapper-12 mr-1.5">
             <div className="cbx">
-                <input type="checkbox" id={`${className}`} />
+                <input
+                    ref={inputRef}
+                    type="checkbox"
+                    id={`${className}`}
+                    onChange={(e) => onChange?.(e.target.checked)}
+                />
                 <label htmlFor={`${className}`}></label>
                 <svg fill="none" viewBox="0 0 15 14" height="14" width="15">
                     <path d="M2 8.36364L6.23077 12L13 2"></path>

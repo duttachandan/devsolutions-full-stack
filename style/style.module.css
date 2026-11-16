@@ -1,5 +1,3 @@
-
-
 .font_base {
     font-family: var(--font-base);
 }
@@ -8,8 +6,13 @@
     font-family: var(--font-baseNue);
 }
 
-.font_Inter{
+.font_Inter {
     font-family: "Inter", sans-serif;
+}
+
+.font_Inter_h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
 }
 
 .bg_primary {
@@ -69,7 +72,6 @@
 .nav_links:hover>.span_hover_effect>span {
     transform: translateY(-100%);
 }
-
 
 .text_space {
     display: flex !important;
@@ -202,7 +204,7 @@
     font-family: "Inter", sans-serif;
 }
 
-.Bg_card{
+.Bg_card {
     background: url("../assets/Image/face_wallpaper.avif");
     background-size: cover;
     background-repeat: no-repeat;
@@ -213,14 +215,22 @@
     .main_font_after>span {
         font-size: 7.575vw;
     }
+
+    .font_Inter_h2 {
+        font-family: "Inter", sans-serif;
+        letter-spacing: -7.28px;
+        line-height: 100px;
+        font-weight: 600;
+    }
 }
 
-@media  screen and (min-width: 2200px) {
-    .main_heading{
-        font-size:193px;
+@media screen and (min-width: 2200px) {
+    .main_heading {
+        font-size: 193px;
     }
-    .main_font_after>span{
-        font-size:170px;
+
+    .main_font_after>span {
+        font-size: 170px;
     }
 }
 
