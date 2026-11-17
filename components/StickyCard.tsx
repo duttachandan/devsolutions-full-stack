@@ -41,17 +41,26 @@ export default function SelectedWork() {
                         gsap.set(inner, { transformOrigin: "center top" });
                         // Shrink this card while the next one slides over it.
                         if (!reduceMotion && index < cards.length - 1) {
+                            // gsap.to(inner, {
+                            //     scale: 1 - (cards.length - 1 - index) * 0.03 - 0.03,
+                            //     ease: "none",
+                            //     scrollTrigger: {
+                            //         trigger: cards[index + 1],
+                            //         start: "top bottom",
+                            //         end: () => `top ${stickyTop + (index + 1) * peek}px`,
+                            //         scrub: true,
+                            //         invalidateOnRefresh: true,
+                            //     },
+                            // });
                             gsap.to(inner, {
-                                scale: 1 - (cards.length - 1 - index) * 0.03 - 0.03,
-                                ease: "none",
+                                y: -900,
                                 scrollTrigger: {
                                     trigger: cards[index + 1],
                                     start: "top bottom",
-                                    end: () => `top ${stickyTop + (index + 1) * peek}px`,
+                                    end: "bottom top",
                                     scrub: true,
-                                    invalidateOnRefresh: true,
-                                },
-                            });
+                                }
+                            })
                         };
                     });
                 }

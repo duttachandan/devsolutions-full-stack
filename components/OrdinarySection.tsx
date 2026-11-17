@@ -18,10 +18,11 @@ const OrdinarySection = () => {
                 Image,
                 {
                     scaleX: 1,
-                    y: 10,
+                    y: -100,
                 },
                 {
                     scale: 1.06,
+                    y: 0,
                     ease: 'none',
                     stagger: 0.5,
                     scrollTrigger: {

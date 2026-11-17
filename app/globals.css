@@ -41,6 +41,11 @@ body {
   background: #FBFBFB;
 }
 
+::selection {
+  background-color: var(--primary-color); /* Changes the highlight background color */
+  color: #fff;            /* Changes the text color while selected */
+}
+
 a {
   display: inline-block;
   text-decoration: none;

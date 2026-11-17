@@ -39,6 +39,7 @@ export default function Home() {
   return (
     <main>
       <div className="banner-section-background"></div>
+
       {/* Banner Section */}
       <section className="banner-section">
         <div className="mx-auto px-3.75 max-w-[1848px]">
@@ -193,10 +194,8 @@ export default function Home() {
         <div className="px-3.75 mx-auto max-w-[1848px]">
           <h2
             data-aos="fade-up"
-            className={`${Style.font_Inter_h2} 
-          text-black text-center text-[30px]
-          md:text-[8.412vw] xl:text-[80px] 
-          font-bold`}
+            className={`${Style.font_Inter_h2} text-black 
+            text-center text-[30px] md:text-[8.412vw] xl:text-[104px] font-bold`}
           >
             Your Goals, Our Priority
           </h2>
@@ -207,7 +206,7 @@ export default function Home() {
             From concept to launch, we're committed to your success with rapid response times and personalized attention to detail.
           </p>
           {/* Post Production Support */}
-          <div className="flex items-stretch flex-wrap mx-[-7.5px] mt-10">
+          <div data-aos="fade-up" data-aos-duration="1500" className="flex items-stretch flex-wrap mx-[-7.5px] mt-10">
             {/* First Slide */}
             <div className="px-[7.5px] w-full md:w-1/2 xl:w-1/4 mb-5">
               <div className="min-h-50 border border-gray-300 w-full">
